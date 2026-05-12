@@ -136,6 +136,37 @@ footer{background:#111e30;border-top:1px solid rgba(255,255,255,.05);padding:2.4
 .social-link{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.10);color:rgba(255,255,255,.35);text-decoration:none;transition:border-color .2s,color .2s;}
 .social-link:hover{border-color:var(--gold);color:var(--gold);}
 .social-link svg{width:14px;height:14px;fill:currentColor;}
+
+
+@media (max-width: 768px) {
+  nav { padding: 16px 5vw; }
+  .nav-links { display: none; }
+
+  .parallax-hero, .hero { height: 55vw; min-height: 260px; }
+  .hero-title { font-size: clamp(1.8rem, 7vw, 2.8rem) !important; }
+  .hero-content { padding-top: 60px; padding-left: 6vw; padding-right: 6vw; }
+
+  /* GRID principal → 1 columna */
+  .areas-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1px;
+  }
+
+  /* ÚLTIMA FILA (Daños + Laboral) → también 1 columna */
+  .areas-last-row {
+    flex-direction: column !important;
+    gap: 1px;
+  }
+  .areas-last-row .area-card {
+    width: 100% !important;
+  }
+
+  .area-card { padding: 2rem 1.4rem; }
+  .areas-intro { padding: 40px 6vw 24px; }
+
+  footer { flex-direction: column; gap: 16px; padding: 32px 6vw; }
+}
+
 </style>
 </head>
 <body>

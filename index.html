@@ -183,6 +183,174 @@ footer{
 }
 .social-link:hover{border-color:var(--gold);color:var(--gold);}
 .social-link svg{width:14px;height:14px;fill:currentColor;}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 16px 5vw;
+    flex-wrap: nowrap;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-brand-name {
+    font-size: 11px;
+  }
+
+  /* HERO GENERAL */
+  .hero, .parallax-hero {
+    height: 55vw;
+    min-height: 260px;
+  }
+  .page-hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
+  }
+  .hero-label {
+    font-size: 8px;
+    letter-spacing: .2em;
+  }
+  .hero-center, .hero-content {
+    padding: 0 6vw;
+    padding-top: 60px;
+  }
+
+  /* INDEX HERO */
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.5rem) !important;
+  }
+  .hero-sub {
+    font-size: 11px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  /* SOMOS - Layout 3 columnas → 1 columna */
+  .somos-main {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 50px 6vw 60px !important;
+    gap: 32px !important;
+  }
+  .somos-col, .somos-col-left, .somos-col-right {
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    justify-self: center !important;
+  }
+  .somos-col-left .body-text,
+  .somos-col-right .body-text {
+    text-align: justify !important;
+  }
+  .somos-col-left .section-rule,
+  .somos-col-right .section-rule,
+  .section-rule {
+    margin: 0 auto 1.6rem auto !important;
+  }
+  .somos-photo {
+    width: 85vw !important;
+    max-width: 380px;
+  }
+
+  /* EQUIPO */
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 6vw;
+  }
+  .team-intro {
+    padding: 50px 6vw 30px;
+  }
+  .team-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  /* AREAS */
+  .areas-grid, .practice-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    padding: 0 5vw;
+  }
+  .areas-intro, .section-intro {
+    padding: 50px 6vw 30px;
+  }
+  .area-card, .practice-card {
+    padding: 28px 24px;
+  }
+
+  /* CONTACTO */
+  .contact-layout, .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px;
+    padding: 50px 6vw 60px;
+  }
+  .contact-form-wrap, .contact-info {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .contact-map {
+    height: 220px;
+  }
+
+  /* TRABAJAR */
+  .jobs-grid, .open-positions {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    padding: 0 5vw;
+  }
+  .values-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px;
+  }
+  .trabajar-intro {
+    padding: 50px 6vw 30px;
+  }
+
+  /* TEXTOS GENERALES */
+  .section-title, .page-title {
+    font-size: clamp(1.6rem, 6vw, 2.4rem) !important;
+  }
+  .body-text {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  footer, .site-footer {
+    padding: 40px 6vw !important;
+  }
+  .footer-grid, .footer-cols {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  /* FORMULARIOS */
+  input, textarea, select {
+    font-size: 16px !important; /* evita zoom en iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero, .parallax-hero {
+    height: 60vw;
+    min-height: 240px;
+  }
+  .somos-photo {
+    width: 92vw !important;
+  }
+}
+
 </style>
 </head>
 <body>

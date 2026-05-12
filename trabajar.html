@@ -162,6 +162,35 @@ footer{background:#111e30;border-top:1px solid rgba(255,255,255,.05);padding:2.4
 .social-link{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.10);color:rgba(255,255,255,.35);text-decoration:none;transition:border-color .2s,color .2s;}
 .social-link:hover{border-color:var(--gold);color:var(--gold);}
 .social-link svg{width:14px;height:14px;fill:currentColor;}
+
+
+@media (max-width: 768px) {
+  nav { padding: 16px 5vw; }
+  .nav-links { display: none; }
+
+  .hero { height: 55vw; min-height: 260px; }
+  .hero-title { font-size: clamp(1.8rem, 7vw, 2.8rem) !important; }
+  .hero-desc { font-size: 13px; padding: 0 4vw; }
+  .hero-content { padding: 60px 6vw 0; text-align: center; }
+  .hero-label { font-size: 8px; }
+
+  /* CONTENT — ajustar padding solo, no apila nada */
+  .content { padding: 50px 5vw 60px; }
+  .content-inner { max-width: 100%; }
+
+  .pillares-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .pillares-body { font-size: .85rem; }
+
+  /* steps: ya son flex column, solo ajustar */
+  .step { padding: 1.4rem 0; gap: .8rem; }
+  .step-num { font-size: 1.2rem; }
+
+  .cta-btn { display: block; text-align: center; margin-top: 1.8rem; }
+
+  footer { flex-direction: column; gap: 16px; padding: 32px 6vw; }
+  input, textarea { font-size: 16px !important; }
+}
+
 </style>
 </head>
 <body>
