@@ -329,3 +329,7 @@ html.seen body{animation:pageIn .55s ease both}
   .js [data-reveal]{opacity:1;transform:none}
   .js [data-reveal] img{transform:none;clip-path:none}
 }
+
+/* Integrante sin foto: iniciales */
+.frame--initials{display:flex;align-items:center;justify-content:center;background:var(--navy-deep);border:1px solid var(--line)}
+.frame--initials span{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:.06em;color:var(--gold-soft)}
