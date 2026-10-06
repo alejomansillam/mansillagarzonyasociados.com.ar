@@ -195,9 +195,11 @@ html.seen body{animation:pageIn .55s ease both}
 .marquee{display:flex;width:max-content;animation:marquee 38s linear infinite}
 .marquee:hover{animation-play-state:paused}
 .marquee ul{display:flex;list-style:none;flex-shrink:0}
-.marquee li{font-family:var(--serif);font-size:clamp(1.5rem,2.8vw,2.3rem);color:rgba(255,255,255,.55);white-space:nowrap;padding-inline:clamp(22px,3vw,44px);display:flex;align-items:center;gap:clamp(44px,6vw,88px);transition:color .3s}
-.marquee li::after{content:'';width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0}
+.marquee li{font-family:var(--serif);font-size:clamp(1.5rem,2.8vw,2.3rem);color:rgba(255,255,255,.55);white-space:nowrap;padding-inline:clamp(22px,3vw,44px);display:flex;align-items:center;gap:18px;transition:color .3s}
+.marquee li::after{content:'';margin-left:clamp(26px,4vw,70px);width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0}
+.marquee li img{width:auto;max-width:none;opacity:.6;transition:opacity .3s}
 .marquee li:hover{color:#fff}
+.marquee li:hover img{opacity:1}
 
 /* ── Llamado final ── */
 .cta-band{position:relative;text-align:left;background:var(--navy-ink);overflow:hidden}
