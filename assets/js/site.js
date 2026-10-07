@@ -56,7 +56,7 @@
       el.style.setProperty('--rd', (i * 0.09).toFixed(2) + 's');
     });
   });
-  if (!('IntersectionObserver' in window) || reduce) {
+  if (!('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('in'); });
   } else {
     var io = new IntersectionObserver(function (entries) {
@@ -70,7 +70,7 @@
   /* Contadores */
   function count(el) {
     var end = parseInt(el.getAttribute('data-count'), 10);
-    if (isNaN(end) || reduce) return;
+    if (isNaN(end)) return;
     var start = null, dur = 1700;
     el.textContent = '0';
     function step(t) {
@@ -82,7 +82,7 @@
     requestAnimationFrame(step);
   }
   var counters = [].slice.call(doc.querySelectorAll('[data-count]'));
-  if ('IntersectionObserver' in window && !reduce) {
+  if ('IntersectionObserver' in window) {
     var cio = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
@@ -98,7 +98,7 @@
   var veil = doc.querySelector('.veil');
   doc.addEventListener('click', function (e) {
     var a = e.target.closest ? e.target.closest('a[href]') : null;
-    if (!a || !veil || reduce) return;
+    if (!a || !veil) return;
     var href = a.getAttribute('href');
     if (a.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
     if (!/^[\w-]+\.html([?#].*)?$/.test(href)) return;

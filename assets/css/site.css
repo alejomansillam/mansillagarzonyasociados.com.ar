@@ -322,12 +322,32 @@ html.seen body{animation:pageIn .55s ease both}
   .btn{width:100%}
 }
 
+/* Pantallas táctiles: lo que en computadora ocurre al pasar el mouse, acá ocurre al entrar en pantalla */
+@media (hover:none){
+  .person.in .frame img{filter:none;transition:filter 1.4s ease .9s,transform 1.2s var(--ease-out),clip-path 1.3s var(--ease)}
+  .person.in .frame::after{transform:scaleX(1);transition-delay:1s}
+  .row.in::before{transform:scaleX(1);transition-delay:.35s}
+  .row.in svg{transform:translateX(4px)}
+  .area.in::after{transform:scaleX(1);transition-delay:.4s}
+  .area.in .area-icon{transform:translateY(-4px)}
+  .marquee li img{opacity:.85}
+  .btn:active::before{transform:none}
+  .btn--ghost:active{color:var(--navy-ink)}
+  .row:active,.area:active{background:var(--navy-lift)}
+  .social a:active,.wa:active{transform:scale(.94)}
+}
+
+/* Movimiento reducido: sin desplazamientos ni zoom, pero se conservan los fundidos suaves */
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  html{scroll-behavior:auto}
   .curtain{display:none}
-  .marquee{animation:none;flex-wrap:wrap}
-  .js [data-reveal]{opacity:1;transform:none}
-  .js [data-reveal] img{transform:none;clip-path:none}
+  .hero-media img,.scroll-cue{animation:none}
+  .line>span{transform:none;animation:pageIn .9s ease both;animation-delay:calc(var(--d) - 1.2s)}
+  .hero-kicker,.hero-sub,.hero-actions,.hero-mark{animation-name:pageIn}
+  .marquee{animation-duration:90s}
+  .js [data-reveal]{transform:none;transition:opacity 1s ease;transition-delay:var(--rd,0s)}
+  .js [data-reveal="img"] img{clip-path:none;transform:none;opacity:0;transition:opacity 1.2s ease}
+  .js [data-reveal="img"].in img{opacity:1}
 }
 
 /* Integrante sin foto: iniciales */
