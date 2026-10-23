@@ -276,7 +276,7 @@ html.seen body{animation:pageIn .55s ease both}
 .social svg{width:15px;height:15px;fill:currentColor}
 .footer-base{margin-top:clamp(40px,5vw,64px);padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--text-faint)}
 
-.wa{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:150;width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--navy-ink);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transform:translateY(90px);transition:transform .6s var(--ease),background .3s}
+.wa{position:fixed;right:22px;bottom:calc(100px + env(safe-area-inset-bottom,0px));z-index:150;width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--navy-ink);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transform:translateY(90px);transition:transform .6s var(--ease),background .3s}
 .wa.show{transform:none}
 .wa:hover{background:#fff}
 .wa svg{width:24px;height:24px;fill:currentColor}
